@@ -8,18 +8,25 @@
 </head>
 <body>
     <form name="frm" action="process.php" method="post">
-    <label>First number</label>
-    <input type="text" name="txtf">
-    <label>Second Number</label>
-    <input type="text" name="txts">
-    <label>Operators</label>
-    <select name="operator">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-</select>
-<input type="submit" value="calculate">
-<input type="reset">
-</form>
+        <ul style="list-style:none;" >
+            <li>
+                <label>First number</label>
+                <input type="text" name="num1">
+                <label>Second Number</label>
+                <input type="text" name="num2">
+            </li>
+            <li>
+                <label>Operators</label>
+            <select name="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+            </select>
+            <li>
+                <input type="submit" value="calculate">
+                <input type="reset">
+            </li>
+        </ul>
+    </form>
 </body>
 </html>
