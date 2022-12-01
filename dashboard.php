@@ -9,7 +9,7 @@ if(isset($_SESSION['username'])){
     Hi
 <?php echo $_SESSION['username'] ?>
 </h1>
-
+<p><a href="logout.php">Logout</a></p>
 <?php }else{ ?>
     <h1>Please Login first</h1>
 

@@ -1,14 +1,20 @@
 <?php
+session_start();
+if(isset($_SESSION['username'])){
+  header('Location:dashboard.php');
+}
   if(isset($_POST['log'])){
     // echo "iamhere";
     $user = $_POST['username'];
     $pass = $_POST['password'];
     if($user=="admin" && $pass=="admin123"){
-        session_start();
+        
         $_SESSION['username']=$user;
-        echo "i am here";
+        
         // location:()
         header('location:dashboard.php');
+    }else{
+      echo "<script>alert('Username and password does not match')</script>";
     }
   }
 
