@@ -6,8 +6,10 @@ if(isset($_POST['signup'])){
 $con = mysqli_connect("localhost","root","","login");
 $sql="insert into signup(username,password,address) values('$username','$password','$address')";
 $query = mysqli_query($con,$sql);
-if($query){
-    echo "Data inserted!!!!!!!!!!!!!!";
+if(!$query){
+    echo "Data inserted!";
+}else{
+    echo 'test';
 }
 
 
