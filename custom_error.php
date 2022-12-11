@@ -5,5 +5,17 @@ function customError($errorno,$errstr){
 }
 set_error_handler("customError");
 // echo($test);
-echo (1/0);
+function checkNum($number){
+    if($number < 1){
+        throw new Exception("cannot be less than 0");
+    }
+}
+
+try{
+    checkNum(0);
+    // echo "This number is less than 0";
+}
+catch(Exception $e){
+    echo "Number cannot be less than 0";
+}
 ?>
